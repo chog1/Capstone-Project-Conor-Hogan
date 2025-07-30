@@ -1,5 +1,7 @@
 **Zomato Delivery Operations Analytics – Final Report**
 
+Jupyter Notebook - https://github.com/chog1/Capstone-Project-Conor-Hogan/blob/main/Final_Zomato_Delivery_Operations_Technical_file.ipynb
+
 **1. Define the Problem Statement**
 Zomato’s team needs a data-driven way to reduce late deliveries and improve customer satisfaction. Two  ML objectives were set:
 - Predict “Time Taken (min)” for each order so that the ETA shown to customers are more accurate.
