@@ -41,8 +41,10 @@ a. Missing-value handling
 - Numerical columns (Delivery_person_Age, Delivery_person_Ratings, etc.): imputed with median.
 - Categorical columns (Type_of_vehicle, Weather_conditions, etc.): imputed with mode.
 - Reduced missing-value rate to zero.
+  
 b. Train–test split
 - 80% train / 20% test using stratified sampling on Rating_Category to balance classes.
+  
 c. Additional processing
 - Datetime conversion to pandas datetime64 then extraction of hour, day, month.
 - One-hot encoding of categorical variables (vehicle type, weather, order type).
