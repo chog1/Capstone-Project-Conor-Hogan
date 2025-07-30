@@ -13,15 +13,15 @@ Accurate predictions are expected to yield:
 
 **2. Model Outcomes or Predictions**
 **Delivery-time estimation**
-Learning Type: Regression
-Supervision: Supervised
-Target Variable: Time_taken(min)
-Expected Output: Continuous ETA (minutes)
+- Learning Type: Regression
+- Supervision: Supervised
+- Target Variable: Time_taken(min)
+- Expected Output: Continuous ETA (minutes)
 **Rider Rating Flag**
-Learning Type: Classification
-Supervision: Supervised
-Target Variable: Rating_Category (Excellent/ Poor)
-Expected Output: Binary label
+- Learning Type: Classification
+- Supervision: Supervised
+- Target Variable: Rating_Category (Excellent/ Poor)
+- Expected Output: Binary label
 
 **3. Data Acquisition**
 Primary source: Zomato Delivery Operations Analytics Dataset on Kaggle 
