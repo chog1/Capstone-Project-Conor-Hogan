@@ -17,6 +17,7 @@ Accurate predictions are expected to yield:
 - Supervision: Supervised
 - Target Variable: Time_taken(min)
 - Expected Output: Continuous ETA (minutes)
+  
 **Rider Rating Flag**
 - Learning Type: Classification
 - Supervision: Supervised
