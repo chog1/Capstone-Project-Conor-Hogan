@@ -3,6 +3,7 @@
 Jupyter Notebook - https://github.com/chog1/Capstone-Project-Conor-Hogan/blob/main/Final_Zomato_Delivery_Operations_Technical_file.ipynb
 
 **1. Define the Problem Statement**
+
 Zomato’s team needs a data-driven way to reduce late deliveries and improve customer satisfaction. Two  ML objectives were set:
 - Predict “Time Taken (min)” for each order so that the ETA shown to customers are more accurate.
 - Classify delivery-partner rating category (Excellent vs. Poor) so that operational planners can pre-assign complex orders to highly rated partners and target training to low-rated partners.
@@ -12,6 +13,7 @@ Accurate predictions are expected to yield:
 - Higher customer retention and order frequency.
 
 **2. Model Outcomes or Predictions**
+
 **Delivery-time estimation**
 - Learning Type: Regression
 - Supervision: Supervised
@@ -25,6 +27,7 @@ Accurate predictions are expected to yield:
 - Expected Output: Binary label
 
 **3. Data Acquisition**
+
 Primary source: Zomato Delivery Operations Analytics Dataset on Kaggle 
 Food Delivert Dataset contains 45,584 rows and 20 columns, with a memory usage of 33.64 MB. This represents a substantial dataset for food delivery analysis with comprehensive coverage across multiple variables.
 Additional context data introduced:
@@ -33,6 +36,7 @@ Additional context data introduced:
 The diverse feature mix covers temporal, spatial, operational and human factors—visually confirmed in the notebook via distribution plots, correlation heat-map, and scatter of distance vs. time (right-skew with positive trend), indicating strong predictive signal.
 
 **4. Data Pre-processing / Preparation**
+
 a. Missing-value handling
 - Numerical columns (Delivery_person_Age, Delivery_person_Ratings, etc.): imputed with median.
 - Categorical columns (Type_of_vehicle, Weather_conditions, etc.): imputed with mode.
@@ -45,6 +49,7 @@ c. Additional processing
 - Standardization of continuous features for linear models; tree-based models kept raw.
 
 **5. Modeling**
+
 - Linear Regression (for delivery time prediction)
 - Random Forest Regressor (for delivery time prediction)
 - Logistic Regression (for rating categorization)
@@ -57,6 +62,7 @@ Rating Categorization
 - Model performance was best for identifying "Poor" and "Good" categories, but overall results suggest further improvement is needed.
 
 **Model Iterations:**
+
 - Using confusion matrix, improvement to Rating Categories were made changing from 4 categories to 3  with Quantile-based binning (equal-size bins) instead of manually grouping values. For Rating Categorisation models, class_weight='balanced' was  also used to further improve performance.
 - RandomizedSearchCV to tune the hyperparameters was also used to cross validate against models for Rating Categorisation models. Random Forest Results after tuning were inline with model results see below:
 
@@ -68,6 +74,7 @@ Accuracy: 0.4872
 - higher order model (neural network model using Tenserflow from keras) also used to valid accuracy of Rating Categoration models.
 
 **6. Model Evaluation**
+
 Based on the model evaluation results:
 - Adopt the Random Forest Regressor for delivery time predictions.
 Its high accuracy and ability to handle complex relationships make it very effective for operational forecasting and optimising delivery logistics.
